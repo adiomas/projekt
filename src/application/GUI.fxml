@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="guiHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="900.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="377.0" prefWidth="567.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="423.0" prefWidth="641.0" style="-fx-background-color: linear-gradient(to left top, #1e579b, #615ea4, #8e65a7, #b46ea6, #d27aa2, #d782ac, #dc8ab7, #e092c1, #c69ad8, #a2a3e6, #79ace9, #4fb2e1); -fx-background-radius: 15px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="closeButton" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="10.0" layoutY="9.0" maxHeight="11.0" minHeight="11.0" minWidth="12.0" mnemonicParsing="false" onMouseClicked="#closeApp" prefHeight="11.0" prefWidth="12.0" style="-fx-background-color: #ff5f57#ff5f57; -fx-background-radius: 30;" text="x" textFill="#ff5f57" wrapText="true">
+                           <font>
+                              <Font size="6.0" />
+                           </font></Button>
+                        <Button fx:id="minimizeButton" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="29.0" layoutY="9.0" maxHeight="11.0" minHeight="11.0" minWidth="12.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="12.0" style="-fx-background-color: #febc2e#febc2e; -fx-background-radius: 30;" text="x" textFill="#febc2e" wrapText="true">
+                           <font>
+                              <Font size="6.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="expandButton" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="47.0" layoutY="9.0" maxHeight="11.0" minHeight="11.0" minWidth="12.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="12.0" style="-fx-background-color: #28c840#28c840; -fx-background-radius: 30;" text="x" textFill="#28c840" wrapText="true">
+                           <font>
+                              <Font size="6.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="238.0" prefHeight="312.0" prefWidth="394.0">
+                     <children>
+                        <Button fx:id="fileChooseButton" layoutX="122.0" layoutY="243.0" mnemonicParsing="false" onAction="#singlefileChooser" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #356da2#356da2; -fx-background-radius: 15px;" text="UPLOAD" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="17.0" />
+                           </font>
+                        </Button>
+                        <HBox fx:id="imageBox" alignment="CENTER" layoutY="33.0" prefHeight="197.0" prefWidth="394.0" visible="false">
+                           <children>
+                              <ImageView fx:id="uploadeImage" fitHeight="162.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="emoticonsAnchor" layoutX="155.0" layoutY="292.0" prefHeight="524.0" prefWidth="561.0" visible="false">
+                     <children>
+                        <Label layoutX="308.0" layoutY="153.0" text="SAD">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="205.0" layoutY="153.0" text="SURPRISE">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="130.0" layoutY="153.0" text="HAPPY">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="161.0" layoutY="23.0" text="CHOOSE EMOTION">
+                           <font>
+                              <Font name="Comic Sans MS" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="385.0" layoutY="153.0" text="ANGER">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="executeButton" layoutX="204.0" layoutY="213.0" mnemonicParsing="false" onAction="#executeAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #356da2#356da2; -fx-background-radius: 15px;" text="EXECUTE" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="17.0" />
+                           </font>
+                        </Button>
+                        <ToggleButton fx:id="angryToggleButton" layoutX="374.0" layoutY="87.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 30px; -fx-base: #df99d3#df99d3;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/angry.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="happyToggleButton" layoutX="119.0" layoutY="87.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 30px; -fx-base: #df99d3#df99d3#df99d3#df99d3;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/happy.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="surpriseToggleButton" layoutX="204.0" layoutY="87.0" maxHeight="52.0" maxWidth="52.0" minHeight="60.0" minWidth="68.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 30px; -fx-base: #df99d3#df99d3#df99d3#df99d3;">
+                           <graphic>
+                              <ImageView fitHeight="67.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/surprise.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="sadnessToggleButton" layoutX="289.0" layoutY="87.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 30px; -fx-base: #df99d3#df99d3#df99d3#df99d3;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/sadness.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <HBox fx:id="Image1Box" alignment="CENTER" layoutX="107.0" layoutY="282.0" prefHeight="226.0" prefWidth="348.0">
+                           <children>
+                              <ImageView fx:id="finalImage" fitHeight="213.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="checkEmotionLabel" layoutX="122.0" layoutY="262.0" prefHeight="32.0" prefWidth="319.0" text="U HAVE TO CHOOSE EMOTION!!!!" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Comic Sans MS" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
